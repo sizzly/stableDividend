@@ -12,9 +12,9 @@ for x in thislist:
   url = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&apikey=BRYEQK2HK6SPAM62&symbol='
   url += x
   print(url)
+  time.sleep(2)
   #r = requests.get(url)
   #data = r.json()
 
   #with open(tickerstring, 'w', encoding='utf-8') as f:
 #      json.dump(data, f, ensure_ascii=False, indent=4)
-    time.sleep(2)
