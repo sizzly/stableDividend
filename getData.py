@@ -5,7 +5,8 @@ import time
 thislist = ["T.TO", "MFC.TO", "CU.TO", "SLF.TO", "IGM.TO", "BCE.TO", "ENB.TO", "ALA.TO", "LIF.TO", "GEI.TO"]
 for x in thislist:
   print(x)
-  time.sleep(15)
+  print('./data/'x'.data')
+  #time.sleep(15)
 # replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
 #url = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=T.TO&apikey=BRYEQK2HK6SPAM62'
 #r = requests.get(url)
