@@ -17,7 +17,7 @@ for x in List:
 
       with open(tickerstring, 'r') as ticker_file:
           ticker_data = json.load(ticker_file)
-          print(ticker_data["Weekly Adjusted Time Series"][0]["5. adjusted close"]); \
-          print(ticker_data["Weekly Adjusted Time Series"][1]["5. adjusted close"])
+          print(ticker_data["Weekly Adjusted Time Series"]["2023-02-24"]["5. adjusted close"]); \
+          print(ticker_data["Weekly Adjusted Time Series"]["2023-02-17"]["5. adjusted close"])
 
 # Output the 20 stocks
