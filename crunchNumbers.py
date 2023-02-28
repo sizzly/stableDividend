@@ -15,4 +15,8 @@ for x in List:
       tickerstring += '.data'
       print(tickerstring)
 
+      with open(tickerstring, 'r') as ticker_file:
+          ticker_data = json.load(ticker_file)
+          print(fcc_data)
+
 # Output the 20 stocks
