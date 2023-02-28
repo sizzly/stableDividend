@@ -36,7 +36,7 @@ for x in List:
           print(f'Mean is {sum52weeks}.')
 
           # Get the deviation
-        with open(tickerstring) as csv_file:
+      with open(tickerstring) as csv_file:
           csv_reader = csv.reader(csv_file, delimiter=',')
           variance_count = 0
           pavpi = 0
