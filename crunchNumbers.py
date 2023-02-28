@@ -23,9 +23,9 @@ for x in List:
                   print(f'Column names are {", ".join(row)}')
                   line_count += 1
               elif line_count < 53:
-                  print(f'\t{row[6]}')
+                  print(f'\t{row[5]}')
                   line_count += 1
-                  
+
           print(f'Processed {line_count} lines.')
 
 # Output the 20 stocks
