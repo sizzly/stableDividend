@@ -33,19 +33,20 @@ for x in List:
 
           print(f'Processed {line_count} lines for a total of {sum52weeks}.')
           mean = float(sum52weeks) / 52
+          print(f'Mean is {sum52weeks}.')
 
           # Get the deviation
-          line_count = 0
+          variance_count = 0
           pavpi = 0
           pavpi2 = 0
           for row in csv_reader:
-              if line_count == 0:
-                  line_count += 1
+              if variance_count == 0:
+                  variance_count += 1
               elif line_count < 53:
                   pavpi = float(row[5]) - float(mean)
                   pavpi2 = float(pavpi) * float(pavpi)
                   sumvariance = float(sumvariance) + float(pavpi2)
-                  line_count += 1
+                  variance_count += 1
 
           variance = float(sumvariance) / 52
           print(f'Variance is {variance}.')
