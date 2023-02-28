@@ -1,5 +1,4 @@
 import requests
-import json
 import time
 
 xList = open("tickerlist").readlines()
@@ -15,8 +14,7 @@ for x in List:
       url += x
       #print(url)
 
-      r = requests.get(url)
-      data = r.json()
+      response = requests.get(url)
 
       with open(tickerstring, 'w', encoding='utf-8') as f:
           f.write(response.text)
