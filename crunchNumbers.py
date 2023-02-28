@@ -21,6 +21,7 @@ for x in List:
       mean = 0
       variance = 0
       sumvariance = 0
+      annualVolatility = 0
 
       # Get the Average Price
       with open(tickerstring) as csv_file:
