@@ -36,15 +36,15 @@ for x in List:
 
           # Get the deviation
           line_count = 0
-          pav-pi = 0
-          pav-pi2 = 0
+          pavpi = 0
+          pavpi2 = 0
           for row in csv_reader:
               if line_count == 0:
                   line_count += 1
               elif line_count < 53:
-                  pav-pi = float(row[5]) - float(mean)
-                  pav-pi2 = float(pav-pi) * float(pav-pi)
-                  sumvariance = float(sumvariance) + float(pav-pi2)
+                  pavpi = float(row[5]) - float(mean)
+                  pavpi2 = float(pavpi) * float(pavpi)
+                  sumvariance = float(sumvariance) + float(pavpi2)
                   line_count += 1
 
           variance = float(sumvariance) / 52
