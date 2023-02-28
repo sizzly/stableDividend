@@ -2,15 +2,16 @@ import requests
 import json
 import time
 
-List = open("tickerlist").readlines()
+xList = open("tickerlist").readlines()
+List=['T.TO']
 for x in List:
-      time.sleep(15)
+      time.sleep(1)
       #print(x)
       tickerstring = './data/'
       tickerstring += x
-      tickerstring += '.data'
+      tickerstring += '.csv'
       #print(tickerstring)
-      url = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&apikey=BRYEQK2HK6SPAM62&symbol='
+      url = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&apikey=BRYEQK2HK6SPAM62&datatype=csv&symbol='
       url += x
       #print(url)
 
@@ -18,4 +19,4 @@ for x in List:
       data = r.json()
 
       with open(tickerstring, 'w', encoding='utf-8') as f:
-          json.dump(data, f, ensure_ascii=False, indent=4)
+          f.write(response.text)
