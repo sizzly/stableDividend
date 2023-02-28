@@ -56,7 +56,7 @@ for x in List:
           variance = float(sumvariance) / 52
           print(f'Variance is {variance}.')
           volatility = math.sqrt(variance)
-          annualVolatility = math.sqrt(260) * float(annualVolatility)
+          annualVolatility = math.sqrt(260) * float(volatility)
           print(f'Volatility is {volatility}.')
           print(f'Annual Volatility is {annualVolatility}.')
 
