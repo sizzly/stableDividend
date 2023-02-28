@@ -13,7 +13,7 @@ f.close()
 
 # Load up each of the ticker datafiles
 
-List=['T.TO']
+List=['T.TO', 'ALA.TO']
 for x in List:
       #print(x)
       tickerstring = './data/'

@@ -2,9 +2,9 @@ import requests
 import time
 
 xList = open("tickerlist").readlines()
-List=['T.TO']
+List=['T.TO', 'ALA.TO']
 for x in List:
-      time.sleep(1)
+      time.sleep(15)
       #print(x)
       tickerstring = './data/'
       tickerstring += x
