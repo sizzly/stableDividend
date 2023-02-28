@@ -7,7 +7,7 @@
 import csv
 import math
 
-f = open("volatility.txt", "w")
+f = open("volatility.csv", "w")
 f.write('Ticker,Volatility,Annual Volatility\n')
 f.close()
 
@@ -64,6 +64,6 @@ for x in List:
           print(f'Volatility is {volatility}.')
           print(f'Annual Volatility is {annualVolatility}.')
 
-          f = open("volatility.txt", "a")
+          f = open("volatility.csv", "a")
           f.write(f'{x},{volatility},{annualVolatility}\n')
           f.close()
