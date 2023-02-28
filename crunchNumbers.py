@@ -8,7 +8,7 @@ import csv
 import math
 
 f = open("volatility.txt", "w")
-f.write('Ticker,Volatility,Annual Volatility')
+f.write('Ticker,Volatility,Annual Volatility\n')
 f.close()
 
 # Load up each of the ticker datafiles
@@ -65,5 +65,5 @@ for x in List:
           print(f'Annual Volatility is {annualVolatility}.')
 
           f = open("volatility.txt", "a")
-          f.write('{x},{volatility},{annualVolatility}')
+          f.write(f'{x},{volatility},{annualVolatility}\n')
           f.close()
