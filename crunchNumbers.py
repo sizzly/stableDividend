@@ -35,16 +35,14 @@ for x in List:
           mean = float(sum52weeks) / 52
           print(f'Mean is {sum52weeks}.')
 
-          # Get the deviation
-      with open(tickerstring) as csv_file:
-          csv_reader = csv.reader(csv_file, delimiter=',')
+      # Get the deviation
           variance_count = 0
           pavpi = 0
           pavpi2 = 0
           for row in csv_reader:
               if variance_count == 0:
                   variance_count += 1
-              elif line_count < 53:
+              elif variance_count < 53:
                   pavpi = float(row[5]) - float(mean)
                   pavpi2 = float(pavpi) * float(pavpi)
                   sumvariance = float(sumvariance) + float(pavpi2)
