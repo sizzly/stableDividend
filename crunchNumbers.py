@@ -33,7 +33,7 @@ for x in List:
 
           print(f'Processed {line_count} lines for a total of {sum52weeks}.')
           mean = float(sum52weeks) / 52
-          print(f'Mean is {sum52weeks}.')
+          print(f'Mean is {mean}.')
 
       # Get the deviation
       with open(tickerstring) as variance_file:
@@ -48,8 +48,6 @@ for x in List:
                   pavpi = float(row[5]) - float(mean)
                   pavpi2 = float(pavpi) * float(pavpi)
                   sumvariance = float(sumvariance) + float(pavpi2)
-                  print(pavpi)
-                  print(row[5])
                   variance_count += 1
 
           variance = float(sumvariance) / 52
