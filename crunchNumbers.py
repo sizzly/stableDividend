@@ -46,6 +46,8 @@ for x in List:
                   pavpi = float(row[5]) - float(mean)
                   pavpi2 = float(pavpi) * float(pavpi)
                   sumvariance = float(sumvariance) + float(pavpi2)
+                  print(pavpi)
+                  print(row[5])
                   variance_count += 1
 
           variance = float(sumvariance) / 52
