@@ -7,6 +7,10 @@
 import csv
 import math
 
+f = open("volatility.txt", "w")
+f.write('Ticker,Volatility,Annual Volatility')
+f.close()
+
 # Load up each of the ticker datafiles
 
 List=['T.TO']
@@ -60,5 +64,6 @@ for x in List:
           print(f'Volatility is {volatility}.')
           print(f'Annual Volatility is {annualVolatility}.')
 
-
-# Output the 20 stocks
+          f = open("volatility.txt", "a")
+          f.write('{x},{volatility},{annualVolatility}')
+          f.close()
