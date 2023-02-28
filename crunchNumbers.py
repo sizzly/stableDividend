@@ -57,7 +57,7 @@ for x in List:
           volatility = sqrt(variance)
           annualVolatility = sqrt(260) * float(annualVolatility)
           print(f'Volatility is {volatility}.')
-          print(f'Annual Volatility is {annualVolatility}'.)
+          print(f'Annual Volatility is {annualVolatility}.')
 
 
 # Output the 20 stocks
