@@ -1,11 +1,13 @@
 # Crunch Numbers
 #
 # Generates a list of 20 stocks that match the Stable Dividend Portfolio
-# It's a way to get the annual volatility value which most stock screeners do
-# not provide.
+# It's a way to get the annual volatility value which most free stock screeners
+# do not provide.
+
+import csv
+import math
 
 # Load up each of the ticker datafiles
-import csv
 
 List=['T.TO']
 for x in List:
@@ -52,6 +54,10 @@ for x in List:
 
           variance = float(sumvariance) / 52
           print(f'Variance is {variance}.')
+          volatility = sqrt(variance)
+          annualVolatility = sqrt(260) * float(annualVolatility)
+          print(f'Volatility is {volatility}.')
+          print(f'Annual Volatility is {annualVolatility}'.)
 
 
 # Output the 20 stocks
