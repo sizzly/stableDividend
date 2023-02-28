@@ -12,8 +12,8 @@ f.write('Ticker,Volatility,Annual Volatility\n')
 f.close()
 
 # Load up each of the ticker datafiles
-
-List=['T.TO', 'ALA.TO']
+List = open("tickerlist").readlines()
+#List=['T.TO', 'ALA.TO']
 for x in List:
       #print(x)
       tickerstring = './data/'

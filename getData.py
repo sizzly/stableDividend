@@ -1,8 +1,8 @@
 import requests
 import time
 
-xList = open("tickerlist").readlines()
-List=['T.TO', 'ALA.TO']
+List = open("tickerlist").readlines()
+#List=['T.TO', 'ALA.TO']
 for x in List:
       time.sleep(15)
       #print(x)
