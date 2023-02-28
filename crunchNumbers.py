@@ -5,20 +5,27 @@
 # not provide.
 
 # Load up each of the ticker datafiles
-import json
+import csv
 
 List=['T.TO']
 for x in List:
       #print(x)
-      tickerstring = './data/'
+      tickerstring = './data/monthly_adjusted_'
       tickerstring += x
-      tickerstring += '.data'
+      tickerstring += '.csv'
       print(tickerstring)
 
-      with open(tickerstring, 'r') as ticker_file:
-          ticker_data = json.load(ticker_file)
-          for iterator in ticker_data["Weekly Adjusted Time Series"]:
-              print(iterator["5. adjusted close"])
-
+      with open(tickerstring) as csv_file:
+          csv_reader = csv.reader(csv_file, delimiter=',')
+          line_count = 0
+          for row in csv_reader:
+              if line_count == 0:
+                  print(f'Column names are {", ".join(row)}')
+                  line_count += 1
+              elif line_count < 53:
+                  print(f'\t{row[6]}')
+                  line_count += 1
+                  
+          print(f'Processed {line_count} lines.')
 
 # Output the 20 stocks
