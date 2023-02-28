@@ -16,7 +16,7 @@ f.close()
 List=['T.TO']
 for x in List:
       #print(x)
-      tickerstring = './data/monthly_adjusted_'
+      tickerstring = './data/'
       tickerstring += x
       tickerstring += '.csv'
       print(tickerstring)
