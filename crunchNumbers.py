@@ -24,9 +24,7 @@ for x in List:
               if line_count == 0:
                   line_count += 1
               elif line_count < 53:
-                  n = []
-                  n.append(row[5])
-                  sum52weeks += n
+                  sum52weeks = float(sum52weeks) + float(row[5])
                   print(f'\t{row[5]}')
                   line_count += 1
 
