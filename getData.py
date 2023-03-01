@@ -11,7 +11,7 @@ for x in List:
       tickerstring += '.csv'
 
       #print(tickerstring)
-      url = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&apikey=BRYEQK2HK6SPAM62&datatype=csv&symbol='
+      url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=full&apikey=BRYEQK2HK6SPAM62&datatype=csv&symbol='
       url += x
       #print(url)
 
